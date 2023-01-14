@@ -5,7 +5,9 @@
 
 
 // 2) Start quiz
-   //  append the question choices 
+// put questions in a unordered list
+   //  append the question choices to the page?
+   // for loop to go through the questions 
    // when the question is answered, it moves on to the next question
    // when user selects the right answer - textContent = "Correct!"
    // when use selects the wrong answer, textContext = "Wrong!" and 10 seconds is removed from the time left 
@@ -14,6 +16,8 @@
  // 3) Scores
       // final score will keep track of how many answers were right 
       
+
+
 
 // code to start timer when start quiz button is pressed
 // timer to countdown from 75 seconds until it reaches 0
@@ -30,15 +34,19 @@ var holdInterval = 0;
 // Holds penalty time
 var penalty = 10;
 
+
    startTimer.addEventListener("click", function () {
     if (holdInterval === 0) {
         holdInterval = setInterval(function() {
             secondsLeft--;
-            currentTime.textContent = secondsLeft;
+            currentTime.textContent = "Time: " + secondsLeft;
 
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
-                alert("TIME IS UP!!")
+                currentTime.textContent = "YOUR TIME IS UP, THE QUIZ HAS NOW FINISHED"
             }
         }, 1000);
     } } ) 
+
+
+   
