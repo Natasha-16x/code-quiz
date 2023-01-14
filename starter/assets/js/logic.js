@@ -15,16 +15,9 @@
       // final score will keep track of how many answers were right 
       
 
-// Jamie Morris Homework-4 Code Quiz 
-// Var with array and object for questions 
-
-
-
-
-
 // code to start timer when start quiz button is pressed
 // timer to countdown from 75 seconds until it reaches 0
-// 
+
 
 var currentTime = document.querySelector("#time");
 var startTimer = document.querySelector("#start");
