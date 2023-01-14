@@ -32,3 +32,11 @@ var questions = [
     },
 
 ];
+
+
+// create an unordered list to display the choices for each questions
+//  append the question choices to the page?
+   // for loop to go through the questions 
+   // when the question is answered, it moves on to the next question
+   // when user selects the right answer - textContent = "Correct!"
+   // when use selects the wrong answer, textContext = "Wrong!" and 10 seconds is removed from the time left 

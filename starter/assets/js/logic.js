@@ -19,19 +19,19 @@
 
 
 
+
+
 // code to start timer when start quiz button is pressed
 // timer to countdown from 75 seconds until it reaches 0
-
-
 var currentTime = document.querySelector("#time");
 var startTimer = document.querySelector("#start");
 
 
-// Seconds left is 15 seconds per question:
+// Seconds left means you get 15 seconds per question:
 var secondsLeft = 76;
 // Holds interval time
 var holdInterval = 0;
-// Holds penalty time
+// Holds penalty time (Time taken away for wrong answer)
 var penalty = 10;
 
 
@@ -46,7 +46,7 @@ var penalty = 10;
                 currentTime.textContent = "YOUR TIME IS UP, THE QUIZ HAS NOW FINISHED"
             }
         }, 1000);
-    } } ) 
+    } } ) ;
 
 
    
