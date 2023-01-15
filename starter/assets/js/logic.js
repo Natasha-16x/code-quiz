@@ -17,7 +17,38 @@
       // final score will keep track of how many answers were right 
       
 
-
+      var questions = [
+        {
+            title: "Commonly used data types DO NOT include:",
+            choices: ["booleans", "numbers", "alerts", "numbers"],
+            answer: "alerts"
+        },
+    
+        {
+            title: "The condition in a if/ else statement is enclosed within...:",
+            choices: ["curly brackets", "question marks", "parentheses", "dollar signs"],
+            answer: "parentheses"
+        },
+    
+        {
+            title: "Arrays in Javascript can be used to store ...:",
+            choices: ["other arrays", "booleans", "all of the above", "numbers and strings"],
+            answer: "all of the above"
+        },
+    
+        {
+            title: "String values must be enclosed within ... when being assigned to variables",
+            choices: ["pound signs", "curly brackets", "dollar signs", "quotes"],
+            answer: "quotes"
+        },
+    
+        {
+            title: "A very useful tool used during development and debugging for printing content to the debugger is...",
+            choices: ["for loops", "HTML", "prompts", "console log"],
+            answer: "console log"
+        },
+    
+    ];
 
 
 
@@ -25,6 +56,9 @@
 // timer to countdown from 75 seconds until it reaches 0
 var currentTime = document.querySelector("#time");
 var startTimer = document.querySelector("#start");
+
+var questionList = document.querySelector("#questions");
+var startScreen = document.querySelector("#start-screen");
 
 
 // Seconds left means you get 15 seconds per question:
@@ -36,6 +70,9 @@ var penalty = 10;
 
 
    startTimer.addEventListener("click", function () {
+    questionList.classList.remove('hide');
+    startScreen.classList.add('hide');
+    loadQuestions();
     if (holdInterval === 0) {
         holdInterval = setInterval(function() {
             secondsLeft--;
@@ -46,7 +83,28 @@ var penalty = 10;
                 currentTime.textContent = "YOUR TIME IS UP, THE QUIZ HAS NOW FINISHED"
             }
         }, 1000);
-    } } ) ;
+    } 
+    
+} ) ;
+
+var questionIndex = 0;
+var questionsDiv = document.querySelector("#questions")
 
 
-   
+function loadQuestions () {
+  var questionIndex = 0;
+  
+// I want questions to show up on the page, 
+// I want to create 4 buttons that have the answer content
+// I want to make a call to another function to see if the answer was right or wrong
+// take 10 seconds off time left if there is a wrong answer chosen
+var questionTitle = document.querySelector("#question-title");
+questionTitle.innerText = questions[0].title;
+var userChoices = document.querySelector("#choices")
+userChoices.innerText = questions[0].choices;
+console.log(questions[0].title);
+console.log(questions);
+console.log(questions[0].choices)
+}
+
+
