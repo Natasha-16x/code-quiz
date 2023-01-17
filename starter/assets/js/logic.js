@@ -18,6 +18,8 @@
 var questionIndex = 0;
 var choicesEl = document.querySelector("#choices");
 var scores = 0;
+var endScreen = document.querySelector("#end-screen");
+var finalScreen = document.querySelector("h2");
 
 
 var questions = [
@@ -64,6 +66,8 @@ var questionList = document.querySelector("#questions");
 var startScreen = document.querySelector("#start-screen");
 
 
+
+
 // Seconds left means you get 15 seconds per question:
 var secondsLeft = 76;
 // Holds interval time
@@ -100,6 +104,7 @@ startTimer.addEventListener("click", function () {
 
 // function to check user choise against correct answer 
 // adds a point to the score variable if correct answer is chosen
+
 function checkAnswer(userChoice, correctAnswer) {
     if (userChoice === correctAnswer) {
         scores++;
@@ -115,7 +120,7 @@ function loadQuestions() {
     var questionTitle = document.querySelector("#question-title");
     questionTitle.innerText = questions[questionIndex].title;
 
-// turns choices array into buttons
+    // turns choices array into buttons
     for (var i = 0; i < questions[questionIndex].choices.length; i++) {
         const button = document.createElement('button');
         button.innerText = questions[questionIndex].choices[i];
@@ -129,7 +134,14 @@ function loadQuestions() {
         // apends buttons to the page 
         choicesEl.appendChild(button);
     }
-
 }
+
+
+// I want to make the last question disappear and the end screen appear 
+// I want the end score to be displayed on the page 
+
+
+
+
 
 
