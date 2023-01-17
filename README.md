@@ -7,7 +7,7 @@ This is a quiz application which uses HTML, CSS and Javascript. This application
 ![screenshot of the webpage](/starter/assets/images/screencapture-file-C-Users-user-Desktop-Week6-Web-APIs-Week6-Challenge-code-quiz-starter-index-html-2023-01-17-19_17_04.png)
 
 ## Link to the deployed site 
-[code-quiz]
+[code-quiz](https://natasha-16x.github.io/code-quiz/)
 
 ## Installation 
 N/a
